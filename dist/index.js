@@ -15,7 +15,7 @@ const app = (0, express_1.default)();
 const prisma = new client_1.PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET || "vraiment_pas_secure_change_moi"; // Mets une vraie valeur secrète dans .env
 app.use((0, cors_1.default)({
-    origin: "http://localhost:8080",
+    origin: ["http://localhost:8080", "https://flixdeal.vercel.app"],
     credentials: true,
 }));
 app.use(express_1.default.json());

@@ -14,7 +14,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "vraiment_pas_secure_change_moi"; /
 
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: ["http://localhost:8080", "https://flixdeal.vercel.app"],
     credentials: true,
   })
 );
